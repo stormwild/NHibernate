@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateConsole", "NHibernateConsole\NHibernateConsole.csproj", "{D5DA0004-947A-4EC2-8FF4-DA36D1E013A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateDomain", "NHibernateDomain\NHibernateDomain.csproj", "{AAA04752-BC3F-4BD2-B032-9AD5BE48765C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "NHibernateDb", "NHibernateDb\NHibernateDb.sqlproj", "{A7335D12-3657-4DA1-A4FD-2EB3B865533B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,16 @@ Global
 		{D5DA0004-947A-4EC2-8FF4-DA36D1E013A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5DA0004-947A-4EC2-8FF4-DA36D1E013A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5DA0004-947A-4EC2-8FF4-DA36D1E013A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA04752-BC3F-4BD2-B032-9AD5BE48765C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA04752-BC3F-4BD2-B032-9AD5BE48765C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA04752-BC3F-4BD2-B032-9AD5BE48765C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA04752-BC3F-4BD2-B032-9AD5BE48765C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7335D12-3657-4DA1-A4FD-2EB3B865533B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7335D12-3657-4DA1-A4FD-2EB3B865533B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7335D12-3657-4DA1-A4FD-2EB3B865533B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A7335D12-3657-4DA1-A4FD-2EB3B865533B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7335D12-3657-4DA1-A4FD-2EB3B865533B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7335D12-3657-4DA1-A4FD-2EB3B865533B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
