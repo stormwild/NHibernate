@@ -31,7 +31,8 @@ namespace NHibernateConsole
             using (var session = sessionFactory.OpenSession())
             using (var txn = session.BeginTransaction())
             {
-                var customers = session.CreateCriteria<Customer>().List<Customer>();
+                //var customers = session.CreateCriteria<Customer>().List<Customer>();
+                var customers = session.Query<Customer>().OrderBy(c => c.LastName).ToList();
 
                 Console.WriteLine("--------------------------\n");
 
