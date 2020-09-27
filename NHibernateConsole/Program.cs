@@ -46,6 +46,54 @@ namespace NHibernateConsole
                 Console.WriteLine("\n--------------------------\n");
             }
 
+            using (var session = sessionFactory.OpenSession())
+            using (var txn = session.BeginTransaction())
+            {
+                var draco = session.Query<Customer>().Where(c => c.LastName == "Malfoy").FirstOrDefault();
+
+                if (draco == null)
+                {
+                    var customer = new Customer
+                    {
+                        FirstName = "Draco",
+                        LastName = "Malfoy"
+                    };
+
+                    session.Save(customer);
+                }
+
+                txn.Commit();
+            }
+
+            using (var session = sessionFactory.OpenSession())
+            using (var txn = session.BeginTransaction())
+            {
+
+                var draco = session.Query<Customer>().Where(c => c.LastName == "Malfoy").FirstOrDefault();
+
+                Console.WriteLine($"{draco.FirstName} {draco.LastName}");
+                txn.Commit();
+
+            }
+
+            using (var session = sessionFactory.OpenSession())
+            using (var txn = session.BeginTransaction())
+            {
+                //var customers = session.CreateCriteria<Customer>().List<Customer>();
+                var customers = session.Query<Customer>().OrderBy(c => c.LastName).ToList();
+
+                Console.WriteLine("\n--------------------------\n");
+
+                foreach (var customer in customers)
+                {
+                    Console.WriteLine($"{customer.FirstName} {customer.LastName}");
+                }
+
+                txn.Commit();
+
+                Console.WriteLine("\n--------------------------\n");
+            }
+
             Console.ReadLine();
         }
     }
