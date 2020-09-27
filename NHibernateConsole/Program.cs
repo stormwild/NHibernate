@@ -1,4 +1,5 @@
-﻿using NHibernate.Cfg;
+using HibernatingRhinos.Profiler.Appender.NHibernate;
+using NHibernate.Cfg;
 using NHibernate.Dialect;
 using NHibernate.Driver;
 using NHibernateDomain;
@@ -15,6 +16,8 @@ namespace NHibernateConsole
     {
         static void Main(string[] args)
         {
+            NHibernateProfiler.Initialize();
+
             var cfg = new Configuration();
             cfg.DataBaseIntegration(x =>
             {
@@ -98,3 +101,5 @@ namespace NHibernateConsole
         }
     }
 }
+
+
